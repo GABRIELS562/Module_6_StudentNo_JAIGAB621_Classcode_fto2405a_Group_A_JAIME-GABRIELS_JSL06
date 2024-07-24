@@ -7,10 +7,18 @@ const menu = {
 
 // Function to display menu items by category
 function displayMenuItems(menu) {
-    // Get the menu container element from the HTML
+   const menuContainer = document.getElementById("menu");
 
     // Loop through each category and its items in the menu object
-
+    for (const category in menu) {
+        // Do something with the category
+      
+        // Loop through the items in the category
+        for (const item of menu[category]) {
+          // Do something with the item
+        }
+      }
+//console.log(displayMenuItems(menu))
         // Create an element to represent the category
 
         // Set the text content of the category element to the category name
