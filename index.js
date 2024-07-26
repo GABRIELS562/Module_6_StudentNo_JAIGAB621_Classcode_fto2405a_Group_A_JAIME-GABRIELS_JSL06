@@ -1,4 +1,26 @@
+/** Hi Benjamin. Also found this challenging task. Especially these snippets of codes. 
+ * I will try and go over it line by line and figure it out. 
+ * The DOM manipulation is quite straight forward. 
+ * I think overall i need to recap on functions, arrow functions, arrays.map, arrays.reduce
+ * classes and objects.  
+ * 
+ * function displayMenuItems(menu) {
+    const menuContainer = document.getElementById("menu");
 
+    // Loop through each category and its items in the menu object
+    for (const category in menu) {
+
+
+function initMenuSystem(menu) {
+    displayMenuItems(menu);
+}
+
+// Initialize the menu system when the page loads
+window.onload = () => {
+    initMenuSystem(menu);
+};
+
+*/
 const menu = {
     Starters: ["Garlic Bread", "Bruschetta"],
     MainCourses: ["Margherita Pizza", "Spaghetti Carbonara"],
@@ -13,7 +35,7 @@ function displayMenuItems(menu) {
     for (const category in menu) {
         // Create an element to represent the category
         const categoryElement = document.createElement("div");
-        categoryElement.className = "category";
+        categoryElement.className = "category";// Assign CSS properties
         categoryElement.textContent = category;
 
        
@@ -56,9 +78,9 @@ function addToOrder(itemName) {
     // Append the order item to the order list
     orderItems.appendChild(orderItem);
 
-    // Update the total price (assuming each item is $10 for simplicity)
+    // Update the total price (assuming each item is 20 for simplicity)
     let currentTotal = parseFloat(orderTotalElement.textContent);
-    currentTotal += 10; // Adjust this value as per actual item prices
+    currentTotal += 20; // Adjust this value as per actual item prices
     orderTotalElement.textContent = currentTotal.toFixed(2);
 }
 
